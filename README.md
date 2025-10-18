@@ -1,4 +1,4 @@
-# TokenRoll Claude Code Plugin
+# Scouts System
 
 <div align="center">
 
