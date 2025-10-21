@@ -1,8 +1,22 @@
 {
-  "name": "tr",
-  "description": "TokenRoll standard Claude Code plugin for internal team use",
-  "version": "1.0.19",
+  "name": "scouts",
+  "version": "1.0.0",
+  "description": "Semantic-first parallel code investigation framework for intelligent codebase exploration",
   "author": {
-    "name": "DJJ & Danniel"
-  }
+    "name": "cedric",
+    "email": "handsomecmh@gmail.com"
+  },
+  "homepage": "https://github.com/Cedriccmh/scouts",
+  "repository": "https://github.com/Cedriccmh/scouts.git",
+  "license": "MIT",
+  "keywords": [
+    "code-investigation",
+    "semantic-search",
+    "hybrid-retrieval",
+    "codebase-analysis",
+    "parallel-exploration",
+    "knowledge-management"
+  ],
+  "commands": ["./commands/"],
+  "agents": ["./agents/"]
 }

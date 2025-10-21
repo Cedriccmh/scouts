@@ -1,15 +1,17 @@
 {
-  "name": "tokenroll-cc-plugin",
+  "name": "scouts-plugin-marketplace",
   "owner": {
-    "name": "TokenRoll",
-    "email": "shuaiqijianaho@qq.com"
+    "name": "cedric",
+    "email": "handsomecmh@gmail.com"
   },
-  "description": "TokenRoll internal Claude Code plugin marketplace",
+  "description": "Scouts - Intelligent code investigation system plugin marketplace",
   "plugins": [
     {
-      "name": "tr",
+      "name": "scouts",
       "source": "./",
-      "description": "TokenRoll custom commands and agents for Claude Code"
+      "description": "Semantic-first parallel code investigation framework with hybrid search strategy",
+      "version": "1.0.0",
+      "tags": ["investigation", "semantic-search", "codebase-analysis"]
     }
   ]
 }
