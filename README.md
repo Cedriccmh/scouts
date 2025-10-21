@@ -24,6 +24,38 @@ Memory Bank Index (知识中枢)
 - 📚 **知识复用**：基于索引的按需加载，避免信息过载
 - 📊 **结构化输出**：标准化报告格式，易于整合
 
+## 📦 安装
+
+### 方式 1：从 GitHub 直接安装（推荐）
+
+在 Claude Code 中运行以下命令：
+
+```bash
+/plugin install https://github.com/Cedriccmh/scouts
+```
+
+### 方式 2：克隆到本地使用
+
+```bash
+git clone https://github.com/Cedriccmh/scouts.git
+```
+
+然后在 Claude Code 中加载本地插件目录。
+
+### 验证安装
+
+安装成功后，你可以使用以下命令验证：
+
+```bash
+/withScout --help
+```
+
+或者直接开始使用：
+
+```bash
+/withScout 调查我的项目结构
+```
+
 ## 🚀 快速开始
 
 ### 基础用法
