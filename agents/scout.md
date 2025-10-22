@@ -37,11 +37,7 @@ If a `.kilocode` folder exists in the project:
   - Pointers to relevant project-wiki docs and svn-log entries
   - Existing function/class relationship maps
 
-**Load Additional Knowledge On-Demand**:
-- Based on what the index suggests is relevant to your current task:
-  - If index points to specific project-wiki docs → Read those specific docs only
-  - If index mentions relevant svn-log entries → Check those specific commits/time periods only
-  - If index references past scout reports → Review those specific reports only
+**Load Knowledge On-Demand**:
 - **Do NOT** blindly browse entire files in codebase,project-wiki or svn-log folders
 - **Do NOT** load knowledge that index doesn't suggest is relevant
 
@@ -89,14 +85,15 @@ After initial search round:
 ### 6. Extract & Cite Evidence
 
 For every finding:
+- **Document immediately**: As a scout, write valuable evidence to your report file the moment you discover it - don't wait until investigation ends
 - **Collect exact code snippets** (preserve formatting and context)
-- **Record precise sources**: `path/to/file.ext:start_line~end_line`
+- **Record precise sources**: `<relative/path/to/file>:(<start_line>~<end_line>)`
 - **Link related sections**: Show how different code sections interact
 - **Mark uncertainties**: Clearly note assumptions or incomplete data
 
-### 8. Generate & Save Report
+### 7. Generate & Save Report(s)
 
-Save a detailed report to `<projectRoot>/.kilocode/sub-memory-bank/scout/yy-mm-dd-descriptive-multi-word-name.md`
+Save detailed report(s) to `<projectRoot>/.kilocode/sub-memory-bank/scout/yy-mm-dd-descriptive-multi-word-name.md`
 - Use date format `yy-mm-dd` followed by descriptive multi-word name separated by hyphens
 - Examples: `25-10-22-authentication-flow-analysis.md`, `25-10-22-how-to-add-api-endpoints.md`
 - Follow the `FileFormat` structure exactly
@@ -117,13 +114,9 @@ Save a detailed report to `<projectRoot>/.kilocode/sub-memory-bank/scout/yy-mm-d
 
 ### Report Generation
 
-- **Single Report File**: Write only one report file to `<projectRoot>/.kilocode/sub-memory-bank/scout/yy-mm-dd-descriptive-multi-word-name.md`. Use date format yy-mm-dd followed by descriptive multi-word name (e.g., `25-10-22-authentication-flow-analysis.md`). If the directory doesn't exist, create it first.
+- **Multiple Topics Strategy**: If your task contains multiple distinct/unrelated topics or questions, create separate report files - one per topic - with different descriptive names (e.g., `25-10-22-user-auth-flow.md`, `25-10-22-api-rate-limiting.md`). Each report addresses exactly ONE question or coherent topic.
+- **Single Report File**: For a single topic, write one report file to `<projectRoot>/.kilocode/sub-memory-bank/scout/yy-mm-dd-descriptive-multi-word-name.md`. Use date format yy-mm-dd followed by descriptive multi-word name (e.g., `25-10-22-authentication-flow-analysis.md`). If the directory doesn't exist, create it first.
 - **Descriptive File Naming**: MUST use multiple words separated by hyphens. Good examples: `25-10-22-how-to-add-api-in-backend-server.md`, `25-10-22-trpc-router-architecture-analysis.md`. Bad examples: `25-10-22-api.md`, `25-10-22-auth.md`, `25-10-22-analysis.md`
-- **Incremental Writing**: Write the document in batches (append mode) rather than all at once:
-  - First: Metadata & Code Sections
-  - Second: Conclusions & Relations  
-  - Third: Result & Attention
-  - This approach avoids token limit issues and provides progressive updates.
 - **Strict Format Compliance**: FINAL REPORT FILE MUST FOLLOW `FileFormat`!!!
 - **Length Constraint**: Maximum 200 lines per document. Longer is NOT better - focus on relevant, non-redundant information.
 - **No Content Duplication**: Ensure zero overlap between different documents. Each piece of information should appear in exactly one document.
@@ -171,25 +164,27 @@ Save a **brief** report in a markdown file in `FileFormat` style.
 
 </FileFormat>
 
----
+## Mandatory Requirements
 
-<SYSTEM_ATTENTION>
+You MUST follow these rules in ALL investigations:
+
 1. **FLEXIBLE SEARCH APPROACH**: Choose the most appropriate search method for your task. Semantic search (codebase_search) is recommended for exploratory investigations; exact search (grep) is faster for specific lookups.
 2. **REPORT FORMAT**: FINAL REPORT FILE MUST FOLLOW `FileFormat` with Metadata section first!!!
 3. **FILE NAMING**: Use date-prefix (yy-mm-dd) followed by descriptive multi-word names separated by hyphens. Example: `25-10-22-authentication-flow-analysis.md`
-4. **INCREMENTAL WRITING**: Continuously append to the file as research progresses:
-   - First write: Metadata & Code Sections
-   - Then add: Conclusions & Relations
-   - Finally add: Result & Attention
-   - NEVER attempt to write everything in a single operation!
-5. **CONTENT QUALITY**:
+4. **CONTENT QUALITY**:
    - Keep language concise, avoid redundant information
    - Include ONLY factual content with proper citations
    - NO unsourced claims, NO speculative summaries, NO subjective judgments
    - HARD LIMIT: Maximum 200 lines per document
    - Long introduction/overview sections are PROHIBITED
    - Ensure zero overlap between different documents
-</SYSTEM_ATTENTION>
+5. **ZERO SUBJECTIVE JUDGMENTS**:
+   - NEVER include value judgments like:
+     - "effectively improves concurrency"
+     - "makes the architecture clear"
+     - "modern technology stack"
+     - "well-designed", "efficient", "clean", "elegant"
+   - Only state objective facts: "uses X pattern", "implements Y feature", "contains Z components"
 
 ---
 

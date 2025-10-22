@@ -32,15 +32,15 @@ Before starting a new investigation, perform a lightweight knowledge check. **St
     - This index contains:
       * Previously discovered module relationships
       * Known architectural patterns and component interactions
-      * **Pointers** to relevant ProjectWiki docs and SvnLog entries
+      * **Pointers** to relevant project-wiki docs and svn-log entries
       * Links to past investigation reports
       * Known system diagrams and dependency graphs
-    - **Do NOT browse ProjectWiki or SvnLog directly** at this stage—extract pointers only
+    - **Do NOT browse project-wiki or svn-log directly** at this stage—extract pointers only
 
 2.  **Extract Relevant Pointers from Index**:
     - Identify which past investigations are related to the current task
-    - Note which ProjectWiki docs the index suggests are relevant (file paths only, don't read yet)
-    - Note which SvnLog time periods/commits the index highlights (references only, don't browse yet)
+    - Note which project-wiki docs the index suggests are relevant (file paths only, don't read yet)
+    - Note which svn-log time periods/commits the index highlights (references only, don't browse yet)
     - Identify known module relationships that might be relevant
     - List areas the index marks as well-documented vs. knowledge gaps
 
@@ -56,7 +56,7 @@ Before starting a new investigation, perform a lightweight knowledge check. **St
     - List knowledge gaps to prioritize
     - Avoid duplicating work scouts will do—just provide navigation hints
 
-> **Key Principle**: You are a planner, not an investigator. Read the index, extract pointers, and let scouts do the deep exploration into ProjectWiki, SvnLog, and code based on your guidance.
+> **Key Principle**: You are a planner, not an investigator. Read the index, extract pointers, and let scouts do the deep exploration into project-wiki, svn-log, and code based on your guidance.
 
 > **Note**: If this is the first investigation in the project, the index won't exist. That's expected—proceed to Step 1 with empty "Known Information".
 
@@ -68,13 +68,13 @@ This is the most critical step in the entire process. First, deeply understand t
     - Clarify what the user wants to accomplish (e.g., "Implement a JWT token refresh feature")
     - **Identify Task Type** to guide search strategy and data source prioritization:
       * **Bug/Debug**: Focus scouts on call chains, recent changes, execution flow analysis
-        - **Prioritize**: SvnLog (recent commits, bug fix patterns), error traces, test cases
+        - **Prioritize**: svn-log (recent commits, bug fix patterns), error traces, test cases
         - **Search**: Recent modifications, historical similar issues, author contexts
       * **Feature Development**: Direct scouts to API interfaces, module boundaries, architectural documentation
-        - **Prioritize**: ProjectWiki (design docs, API specs), existing similar features, architecture diagrams
+        - **Prioritize**: project-wiki (design docs, API specs), existing similar features, architecture diagrams
         - **Search**: Interface definitions, integration patterns, design decisions
       * **Refactoring**: Point scouts to cross-module dependencies, coupling points, architectural patterns
-        - **Prioritize**: SvnLog (code evolution history), ProjectWiki (original design intent), dependency graphs
+        - **Prioritize**: svn-log (code evolution history), project-wiki (original design intent), dependency graphs
         - **Search**: Architectural constraints, historical refactoring attempts, coupling analysis
     - This task type will inform each scout's search approach and domain selection
 
@@ -104,12 +104,12 @@ Known Information: [Structured context from Memory Bank index - provide navigati
     - [Another finding, e.g., "Token validation happens in middleware/auth.js"]
   
   Relevant Documentation Pointers (from index):
-    - [Index-suggested docs, e.g., "ProjectWiki/architecture/auth-flow.md covers token lifecycle"]
-    - [Another pointer, e.g., "ProjectWiki/api/auth-endpoints.md has API specs"]
+    - [Index-suggested docs, e.g., "project-wiki/architecture/auth-flow.md covers token lifecycle"]
+    - [Another pointer, e.g., "project-wiki/api/auth-endpoints.md has API specs"]
   
   Relevant History Pointers (from index):
-    - [Index-suggested commits, e.g., "SvnLog: Auth refactored in 2024-09, commits r12345-r12350"]
-    - [Another pointer, e.g., "SvnLog: Bug fix for token expiration in r11234"]
+    - [Index-suggested commits, e.g., "svn-log: Auth refactored in 2024-09, commits r12345-r12350"]
+    - [Another pointer, e.g., "svn-log: Bug fix for token expiration in r11234"]
   
   Known Module Relationships (from index):
     - [e.g., "Frontend auth module → Backend /api/auth → AuthService → Database"]
@@ -157,8 +157,8 @@ To ensure clear division of labor between the coordinator (withScout) and scouts
 | Activity | withScout Responsibility | Scout Responsibility |
 |----------|-------------------------|---------------------|
 | **Read Memory Bank Index** | ✅ Lightweight read, extract pointers | ⚠️ Only if Known Info insufficient |
-| **Browse ProjectWiki** | ❌ Don't browse directly | ✅ On-demand load (guided by pointers) |
-| **Browse SvnLog** | ❌ Don't browse directly | ✅ On-demand load (guided by pointers) |
+| **Browse project-wiki** | ❌ Don't browse directly | ✅ On-demand load (guided by pointers) |
+| **Browse svn-log** | ❌ Don't browse directly | ✅ On-demand load (guided by pointers) |
 | **Read Past Reports** | ✅ Read index-referenced reports | ✅ Read task-related scout reports |
 | **Semantic Code Search** | ❌ Don't search directly | ✅ Core responsibility |
 | **Prepare Known Info** | ✅ Structure navigation hints | ❌ Receive and use hints |
@@ -192,18 +192,6 @@ Once all `scout` agents have completed their tasks, consolidate their findings.
     - Is the current information complete? (Check if all research questions were answered)
     - Are there contradictions between scout findings? (e.g., different token storage locations mentioned)
     - Have new, unexpected questions emerged that weren't in the original plan?
-
-**Understanding Scout Report Format**:
-
-Each scout generates a standardized report containing:
-- **Metadata**: Investigation date, search scope, iteration rounds, search strategy, and original research questions
-- **Code Sections**: All discovered code locations with precise line numbers (`path/file:start~end`)
-- **Conclusions**: Key findings and important discoveries about the investigated area
-- **Relations**: Cross-file dependencies, function-to-function calls, module-to-module interactions
-- **Result**: Direct answers to the assigned research questions
-- **Attention**: Potential problems, uncertainties, or conflicts (limited to <20 lines for focus)
-
-This standardized structure enables efficient cross-scout synthesis and comparison.
 
 **Quality Control Checklist**:
 
