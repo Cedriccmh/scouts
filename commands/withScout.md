@@ -124,17 +124,7 @@ Known Information: [Structured context from Memory Bank index - provide navigati
 === Scout A: [Role name, e.g., Frontend Auth Investigator] ===
 Responsibility: [Define Scout A's scope, e.g., Investigate auth patterns and token handling in the frontend codebase]
 
-Search Scope:
-  - Directories: [e.g., frontend/src/auth/, frontend/src/api/]
-  - File Types: [e.g., .ts, .tsx, .js] (optional - scouts can auto-detect)
-  - Domains: [Select from: codebase / ProjectWiki / SvnLog / documentation / multiple]
-    * codebase: Source code files and configuration
-    * ProjectWiki: Architecture docs (.kilocode/ProjectWiki/), design specs, API documentation
-    * SvnLog: Version control history (.kilocode/SvnLog/), commit messages, change patterns
-    * documentation: All docs (ProjectWiki + inline comments + README files)
-    * multiple: Combine multiple domains (e.g., "codebase + ProjectWiki")
-
-Research Questions (phrase as natural language for semantic search):
+Research Questions:
 1. [Question 1, e.g., How does the application store JWT tokens after user login?]
 2. [Question 2, e.g., Where are authentication headers injected into API requests?]
 3. [Question 3, e.g., Is there a global interceptor for handling 401/403 authentication errors?]
@@ -145,16 +135,6 @@ Expected Deliverables:
 
 === Scout B: [Role name, e.g., Backend API Investigator] ===
 Responsibility: [Define Scout B's scope, e.g., Investigate the authentication mechanism of the backend API]
-
-Search Scope:
-  - Directories: [e.g., backend/auth/, backend/middleware/]
-  - File Types: [e.g., .py, .js, .ts]
-  - Domains: [Select from: codebase / ProjectWiki / SvnLog / documentation / multiple]
-    * codebase: Source code files and configuration
-    * ProjectWiki: Architecture docs (.kilocode/ProjectWiki/), design specs, API documentation
-    * SvnLog: Version control history (.kilocode/SvnLog/), commit messages, change patterns
-    * documentation: All docs (ProjectWiki + inline comments + README files)
-    * multiple: Combine multiple domains (e.g., "codebase + SvnLog" for bug investigations)
 
 Research Questions:
 1. [Question 1, e.g., Which middleware validates incoming JWT tokens in API requests?]
