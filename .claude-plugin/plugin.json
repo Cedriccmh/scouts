@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Semantic-first parallel code investigation framework for intelligent codebase exploration",
   "author": {
-    "name": "cedric",
-    "email": "handsomecmh@gmail.com"
+    "name": "cedric"
   },
   "homepage": "https://github.com/Cedriccmh/scouts",
   "repository": "https://github.com/Cedriccmh/scouts.git",
@@ -16,7 +15,5 @@
     "codebase-analysis",
     "parallel-exploration",
     "knowledge-management"
-  ],
-  "commands": ["./commands/"],
-  "agents": ["./agents/"]
+  ]
 }
