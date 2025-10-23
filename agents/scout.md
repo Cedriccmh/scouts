@@ -139,13 +139,15 @@ Save a **brief** report in a markdown file in `FileFormat` style.
   2. [Question 2]
   3. [Question 3]
 
-### Code Sections (Brief Bullet Lists)
+### Code Sections 
 
-- `<relative/path/to/file>:(<start_line>~<end_line>)`:**A BRIEF SUMMARY:** "What this code does"
+<code_section_format>
+- `<relative/path/to/file>:(<start_line>~<end_line>)`:[What this code does]
 
 ```<code>
   actual code snippet, Must be short! if long, use  `...` to ignore some
 ```
+</code_section_format>
 
 ### Report
 
