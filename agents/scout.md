@@ -141,16 +141,11 @@ Save a **brief** report in a markdown file in `FileFormat` style.
 
 ### Code Sections 
 
-<<<<<<< HEAD
-- `<relative/path/to/file>:(<start_line>~<end_line>)`
-- `<What_this_code_does>`
-=======
 <code_section_format>
-- `<relative/path/to/file>:(<start_line>~<end_line>)`:[What this code does]
->>>>>>> 5e92f7b62aa1e25934eeb6ef9e4fc5d9495a44d3
-
+- <relative/path/to/file>:(<start_line>~<end_line>)
+- <what_this_code_does>
 ```<code>
-  actual code snippet, Must be short! if long, use  `...` to ignore some
+  Include a concise excerpt of the relevant code. The code snippet must be as brief as possible while still illustrating the key functionality. If the code is lengthy, replace omitted sections with `...` to keep the snippet short and focused.
 ```
 </code_section_format>
 
