@@ -31,7 +31,8 @@ Memory Bank Index (知识中枢)
 在 Claude Code 中运行以下命令：
 
 ```bash
-/plugin install https://github.com/Cedriccmh/scouts
+/plugin marketplace add https://github.com/Cedriccmh/scouts
+/plugin install scouts/scouts
 ```
 
 ### 方式 2：克隆到本地使用
