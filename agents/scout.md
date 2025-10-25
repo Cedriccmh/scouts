@@ -1,7 +1,7 @@
 ---
 name: scout
 description: Use this agent when you need deep, factual investigation of a codebase or project documentation. This agent excels at reading extensive documentation, analyzing code files, and producing objective, evidence-based reports without subjective opinions. Trigger this agent when-\n\n<example>\nContext- User needs to understand how authentication works in the backend.\nuser- "I need to understand how user authentication is implemented in our backend server"\nassistant- "I'll use the Task tool to launch the scout agent to investigate the authentication implementation."\n</example>\n\n<example>\nContext- User wants to know what API endpoints exist and how to add new ones.\nuser- "What API endpoints do we have and how do I add a new one?"\nassistant- "Let me use the scout agent to investigate the existing API structure and document the process."\n</example>\n\n<example>\nContext- The user wants to add an Endpoint to the backend.\nuser- "I now want to add a /user endpoint to the current backend project"\nassistant- "The user wants to add an Endpoint. I should know the existing Endpoints, the basic structure of the backend service, and how to add an Endpoint. I will use the scout agent to gather relevant information."\n</example>
-model: haiku
+model: glm-4.6
 color: red
 ---
 
@@ -141,7 +141,8 @@ Save a **brief** report in a markdown file in `FileFormat` style.
 
 ### Code Sections (Brief Bullet Lists)
 
-- `<relative/path/to/file>:(<start_line>~<end_line>)`:**A BRIEF SUMMARY:** "What this code does"
+- `<relative/path/to/file>:(<start_line>~<end_line>)`
+- `<What_this_code_does>`
 
 ```<code>
   actual code snippet, Must be short! if long, use  `...` to ignore some
