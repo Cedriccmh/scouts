@@ -134,6 +134,7 @@ Save a **brief** report in a markdown file in `FileFormat` style.
 - **Investigation Date**: [YYYY-MM-DD]
 - **Search Scope**: [directories/file types searched, e.g., "backend/auth/, *.py"]
 - **Iteration Rounds**: [number, e.g., 2]
+- **Tool Usage**: [list of tools used]
 - **Research Questions**: 
   1. [Question 1]
   2. [Question 2]
